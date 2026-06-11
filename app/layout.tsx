@@ -37,7 +37,7 @@ export default function RootLayout({
           {/* Static layout grid — horizontal lines only; vertical lines are column borders */}
           <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 40, pointerEvents: "none" }}>
             <div style={{ ...hLine, top: 56 }} />
-            <div style={{ ...hLine, bottom: 56 }} />
+            <div className="hidden md:block" style={{ ...hLine, bottom: 56 }} />
           </div>
           <div className="flex-1 flex flex-col">
             {children}

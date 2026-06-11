@@ -69,7 +69,7 @@ export default function About() {
           <div className="space-y-6 text-base">
             <div>
               <p className="text-[#111111]"><a href="https://www.aho.no/english/" target="_blank" rel="noopener noreferrer" className="hover:text-[#888888] transition-colors">AHO</a></p>
-              <p className="text-[#888888]">Master of Design, Interaction Design · 2022 – 2024</p>
+              <p className="text-[#888888]">Master of Design<span className="hidden md:inline">, Interaction Design</span> · 2022 – 2024</p>
             </div>
             <div>
               <p className="text-[#111111]"><a href="https://www.uia.no/" target="_blank" rel="noopener noreferrer" className="hover:text-[#888888] transition-colors">UiA</a></p>
