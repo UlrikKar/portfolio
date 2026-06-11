@@ -96,6 +96,8 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
   const [enterTransition, setEnterTransition] = useState(false);
   const [isLeaving, setIsLeaving] = useState(false);
   const [isNarrow, setIsNarrow] = useState(false);
+  const [videoReady, setVideoReady] = useState<Record<string, boolean>>({});
+  const markReady = (slug: string) => setVideoReady(prev => ({ ...prev, [slug]: true }));
   const rightColRef = useRef<HTMLDivElement>(null);
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const prevTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -273,18 +275,19 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
             }}
           >
             <div style={{ position: "sticky", top: "50vh", transform: "translateY(-50%)", display: "flex", justifyContent: "center" }}>
-              <video
-                src="/Dim.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                style={{
-                  width: "calc(100% - 30px)",
-                  borderRadius: 12,
-                }}
-              />
+              <div style={{ position: "relative", width: "calc(100% - 30px)", aspectRatio: "16/9", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ position: "absolute", inset: 0, animation: "skeleton-pulse 1.5s ease-in-out infinite", opacity: videoReady["nam"] ? 0 : 1, transition: "opacity 300ms", pointerEvents: "none" }} />
+                <video
+                  src="/Dim.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  onCanPlay={() => markReady("nam")}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", opacity: videoReady["nam"] ? 1 : 0, transition: "opacity 300ms" }}
+                />
+              </div>
             </div>
           </div>
         )}
@@ -301,19 +304,19 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
             }}
           >
             <div style={{ position: "sticky", top: "50vh", transform: "translateY(-50%)", display: "flex", justifyContent: "center" }}>
-              <video
-                src="/Nav.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                style={{
-                  width: "calc(100% - 30px)",
-                  borderRadius: 12,
-                  boxShadow: "0 8px 40px rgba(0,0,0,0.25)",
-                }}
-              />
+              <div style={{ position: "relative", width: "calc(100% - 30px)", aspectRatio: "16/9", borderRadius: 12, overflow: "hidden", boxShadow: "0 8px 40px rgba(0,0,0,0.25)" }}>
+                <div style={{ position: "absolute", inset: 0, animation: "skeleton-pulse 1.5s ease-in-out infinite", opacity: videoReady["nav"] ? 0 : 1, transition: "opacity 300ms", pointerEvents: "none" }} />
+                <video
+                  src="/Nav.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  onCanPlay={() => markReady("nav")}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", opacity: videoReady["nav"] ? 1 : 0, transition: "opacity 300ms" }}
+                />
+              </div>
             </div>
           </div>
         )}
@@ -329,21 +332,20 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
               background: "#d4e3d0",
             }}
           >
-            {/* Sticky video container */}
             <div style={{ position: "sticky", top: "50vh", transform: "translateY(-50%)", display: "flex", justifyContent: "center" }}>
-              <video
-                src="/Ask.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                style={{
-                  width: "calc(100% - 30px)",
-                  borderRadius: 12,
-                  boxShadow: "0 8px 40px rgba(0,0,0,0.25)",
-                }}
-              />
+              <div style={{ position: "relative", width: "calc(100% - 30px)", aspectRatio: "16/9", borderRadius: 12, overflow: "hidden", boxShadow: "0 8px 40px rgba(0,0,0,0.25)" }}>
+                <div style={{ position: "absolute", inset: 0, animation: "skeleton-pulse 1.5s ease-in-out infinite", opacity: videoReady["ask"] ? 0 : 1, transition: "opacity 300ms", pointerEvents: "none" }} />
+                <video
+                  src="/Ask.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  onCanPlay={() => markReady("ask")}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", opacity: videoReady["ask"] ? 1 : 0, transition: "opacity 300ms" }}
+                />
+              </div>
             </div>
           </div>
         )}
