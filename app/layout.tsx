@@ -15,7 +15,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ulrik Karlstrøm",
-  description: "Hello, I'm Ulrik. I design and build interfaces with intention.",
+  description: "Product Designer based in Oslo. Currently at Celsia.",
+  robots: "index, follow",
+  openGraph: {
+    title: "Ulrik Karlstrøm",
+    description: "Product Designer based in Oslo. Currently at Celsia.",
+    type: "website",
+    url: "https://ulrik.site",
+  },
+  twitter: {
+    card: "summary",
+    title: "Ulrik Karlstrøm",
+    description: "Product Designer based in Oslo. Currently at Celsia.",
+  },
 };
 
 export const viewport = {
