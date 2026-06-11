@@ -135,7 +135,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
     const link = document.createElement("link");
     link.rel = "preload";
     link.as = "video";
-    link.href = "/Ask.mov";
+    link.href = "/Ask.mp4";
     document.head.appendChild(link);
     return () => { link.parentNode?.removeChild(link); };
   }, []);
@@ -274,7 +274,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
           >
             <div style={{ position: "sticky", top: "50vh", transform: "translateY(-50%)", display: "flex", justifyContent: "center" }}>
               <video
-                src="/Dim.mov"
+                src="/Dim.mp4"
                 autoPlay
                 muted
                 loop
@@ -302,7 +302,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
           >
             <div style={{ position: "sticky", top: "50vh", transform: "translateY(-50%)", display: "flex", justifyContent: "center" }}>
               <video
-                src="/nav.mov"
+                src="/Nav.mp4"
                 autoPlay
                 muted
                 loop
@@ -332,7 +332,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
             {/* Sticky video container */}
             <div style={{ position: "sticky", top: "50vh", transform: "translateY(-50%)", display: "flex", justifyContent: "center" }}>
               <video
-                src="/Ask.mov"
+                src="/Ask.mp4"
                 autoPlay
                 muted
                 loop
