@@ -167,7 +167,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
 
         <section className="mb-14">
           <p data-scramble className="text-base text-[#111111] leading-relaxed mb-3">
-            Hello, I'm Ulrik. I design and build interfaces with intention.
+            Hello, I'm Ulrik. I design and build digital products.
           </p>
           <p className="text-base text-[#111111]">
             Product Designer at{" "}
