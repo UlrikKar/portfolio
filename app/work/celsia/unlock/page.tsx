@@ -27,7 +27,7 @@ export default function UnlockPage() {
     e.preventDefault();
     if (password === "Celsia2026") {
       document.cookie = "celsia_access=granted; path=/; max-age=86400";
-      router.push("/work/celsia");
+      window.location.href = "/work/celsia";
     } else {
       showError();
     }
