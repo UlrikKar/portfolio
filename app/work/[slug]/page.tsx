@@ -121,7 +121,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
               <p className="mb-8">This space is for ongoing side projects, prototypes, and experiments that are still taking shape. The work exists, it just isn&rsquo;t ready to be shown yet. More soon.</p>
               <p className="mb-4 text-[#888888]">Currently building</p>
               <div className="flex flex-col gap-2 text-[#888888]">
-                <p>· A service encouraging physical hangouts.</p>
+                <p>· A digital concept encouraging physical hangouts.</p>
                 <p>· Interfaces for keeping humans in the loop on AI decisions.</p>
                 <p>· A tool for making multi-agent AI systems comprehensible.</p>
               </div>
