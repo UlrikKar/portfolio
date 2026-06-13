@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function UnlockPage() {
   const [password, setPassword] = useState("");
@@ -39,8 +40,17 @@ export default function UnlockPage() {
 
       <div
         className="px-6 md:min-w-[480px]"
-        style={{ flex: "1 1 33.33%", display: "flex", flexDirection: "column", justifyContent: "center" }}
+        style={{ flex: "1 1 33.33%", display: "flex", flexDirection: "column" }}
       >
+        <nav className="py-4 mb-16 flex items-baseline justify-between">
+          <Link href="/" className="text-base text-[#111111] hover:text-[#888888] transition-colors">
+            Ulrik Karlstrøm
+          </Link>
+          <Link href="/about" className="text-base text-[#aaaaaa] hover:text-[#888888] transition-colors">
+            About
+          </Link>
+        </nav>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", paddingBottom: "10vh" }}>
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <p style={{ fontSize: "17px", color: "#888888", margin: 0 }}>
             <a href="mailto:ulrikkm@gmail.com" style={{ color: "#888888", textDecoration: "underline" }}>Get in touch</a> for access.
@@ -100,6 +110,7 @@ export default function UnlockPage() {
             Incorrect password
           </p>
         </form>
+        </div>
       </div>
 
       <div className="hidden md:block" style={{ flex: "1 1 33.33%", borderLeft: "1px solid #333333" }} />
