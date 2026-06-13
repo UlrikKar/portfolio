@@ -36,7 +36,7 @@ const descriptions: Record<string, string[]> = {
 
 const subtitles: Record<string, string> = {
   celsia: "Celsia’s built-in system for assigning, tracking, and completing every reporting requirement across a complex sustainability report.",
-  nam: "Masters thesis exploring what digital engagement with art becomes when physical space stops being a constraint.",
+  nam: "The Distributed Museum is a masters thesis exploring what digital engagement with art becomes when physical space stops being a constraint.",
   nav: "Comprehensive benefits overview for NAV, giving users a coherent picture of everything they receive and when, currently live on Norway's most critical public welfare platform.",
   sanity: "Marketing and brand design at Sanity.io, alongside UX work spanning their design system, learning platform, and product communications.",
   ask: "Designing AI communication and developing a linguistic framework for how AI should talk to children in a learning context, resulting in a chatbot built with Aschehoug on their school curriculum.",
