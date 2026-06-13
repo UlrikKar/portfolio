@@ -7,11 +7,6 @@ const projects = [
     description: "Sustainability reporting, made clear",
   },
   {
-    slug: "nam",
-    title: "DiM",
-    description: "Reimagining how to engage with digitized art",
-  },
-  {
     slug: "nav",
     title: "NAV",
     description: "Untangling social security for everyday users",
@@ -20,6 +15,11 @@ const projects = [
     slug: "sanity",
     title: "Sanity",
     description: "Visual marketing and communications design",
+  },
+  {
+    slug: "nam",
+    title: "DiM",
+    description: "Reimagining how to engage with digitized art",
   },
   {
     slug: "ask",
