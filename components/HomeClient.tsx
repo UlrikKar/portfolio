@@ -240,7 +240,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
               pointerEvents: "none",
               opacity: !isLeaving ? 1 : 0,
               transition: enterTransition ? "opacity 150ms" : "opacity 300ms",
-              overflow: "visible",
+              overflow: "hidden",
               background: "#F5F5F0",
             }}
           >
