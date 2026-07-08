@@ -18,7 +18,7 @@ const PROJECT_COLORS: Record<string, string> = {
   ask: "#d0e3e0",
 };
 
-const SANITY_SLIDES = ["/4.png", "/5.png", "/6.png"];
+const SANITY_SLIDES = ["/4.jpg", "/5.jpg", "/6.jpg"];
 const CELSIA_SLIDES = ["/Celsia1.png", "/Celsia2.png", "/Celsia3.png"];
 
 function CelsiaSlideshow() {
