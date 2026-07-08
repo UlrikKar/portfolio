@@ -155,7 +155,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
       <div className="hidden md:block" style={{ flex: isNarrow ? "1 999 33.33%" : "1 1 33.33%", minWidth: 0, borderRight: "1px solid #333333" }} />
 
       {/* Content column */}
-      <div className="px-6 pb-12 w-full md:min-w-[480px]" style={{ flex: "1 1 33.33%" }}>
+      <div className="px-6 pb-24 w-full md:min-w-[480px]" style={{ flex: "1 1 33.33%" }}>
         <nav className="py-4 mb-16 flex items-baseline justify-between">
           <Link href="/" className="text-base text-[#111111] hover:text-[#888888] transition-colors">
             Ulrik Karlstrøm
@@ -200,7 +200,7 @@ export default function HomeClient({ projects }: { projects: Project[] }) {
       </div>
 
       {/* Right column — hover card */}
-      <div ref={rightColRef} className="hidden md:block relative" style={{ flex: isNarrow ? "1 0 33.33%" : "1 1 33.33%", borderLeft: "1px solid #333333" }}>
+      <div ref={rightColRef} className="hidden md:block relative" style={{ flex: isNarrow ? "1 999 33.33%" : "1 1 33.33%", minWidth: 0, borderLeft: "1px solid #333333" }}>
         {/* Outgoing layer — fades out during cross-dissolve */}
         {prevSlug && (
           <div

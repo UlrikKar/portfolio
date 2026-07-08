@@ -13,29 +13,35 @@ Present on home, about, and all work pages. Structure:
   <div ... />        {/* right column: flex: 1 1 33.33% */}
 </div>
 ```
-Do not change the flex values, the column count, or the column order.
+Do not change the column count or the column order.
+
+On the home page (`components/HomeClient.tsx`) the side columns switch to
+`flex: "1 999 33.33%"` with `minWidth: 0` when `isNarrow` (viewport < 1200px).
+Both side columns must always use **identical** flex values — asymmetric
+shrink factors push the center column off-center on iPad/narrow screens.
 
 ## Vertical border lines
 - Left column: `borderRight: "1px solid #333333"`
 - Right column: `borderLeft: "1px solid #333333"`
 Do not remove, recolor, or reposition these borders.
 
-## Desktop nav
+## Nav
+Each page renders its own inline nav as the first child of the center column:
 ```
-<nav className="hidden md:block fixed top-0 left-0 right-0 py-4" style={{ zIndex: 10 }}>
+<nav className="py-4 mb-16 flex items-baseline justify-between">
 ```
-- Must be a **sibling** of the three-column row, at the outermost wrapper level
-- Must **never** be nested inside a transformed ancestor (CSS transform creates a new containing block for fixed elements, trapping the nav inside the column width instead of the viewport)
-- Internal structure is a three-column mirror: three children each with `flex: 1 1 33.33%`
+It is NOT fixed-positioned. Its `py-4` baseline aligns the nav text within the
+56px top band defined by the top grid line.
 
 ## Horizontal border lines
-Defined in `app/layout.tsx` as two absolute 1px divs:
+Defined in `app/layout.tsx` as two absolute 1px divs inside `#page-root`:
 - `top: 56` — top grid line
-- `bottom: 56` — bottom grid line
-These define the content frame. Do not remove or reposition them.
+- `bottom: 56` — bottom grid line (hidden on mobile via `hidden md:block`)
 
-## Spacer div
-```
-<div className="h-32 md:h-56" style={{ pointerEvents: "none" }} />
-```
-Present on home and work pages, below the nav. Do not remove `pointerEvents: none` — the spacer sits in the DOM above the fixed nav and would intercept clicks without it.
+These are positioned relative to the **document** (`#page-root` is
+`min-h-screen`), not the viewport. Therefore every page's center column must
+keep **at least 96px (`pb-24`) of bottom padding** so the bottom line never
+lands inside content on short viewports. Do not reduce bottom padding below
+`pb-24` on any page.
+
+Hover cards and content frames align to these lines with `inset: 57px 0 57px 0`.
