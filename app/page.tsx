@@ -26,11 +26,6 @@ const projects = [
     title: "Ask",
     description: "Bringing AI into primary school education",
   },
-  {
-    slug: "on-design-and-ai",
-    title: "Explorations",
-    description: "Design explorations built with AI",
-  },
 ];
 
 export default function Home() {

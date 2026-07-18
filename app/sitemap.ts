@@ -11,6 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/work/nav`, lastModified: new Date(), priority: 0.8 },
     { url: `${BASE}/work/sanity`, lastModified: new Date(), priority: 0.8 },
     { url: `${BASE}/work/ask`, lastModified: new Date(), priority: 0.8 },
-    { url: `${BASE}/work/on-design-and-ai`, lastModified: new Date(), priority: 0.6 },
   ];
 }
