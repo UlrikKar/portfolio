@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://ulrik.site",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Ulrik Karlstrøm",
     description: "Product Designer based in Oslo. Currently at Celsia.",
   },
